@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/customers
+    body:
+      encoding: UTF-8
+      string: source[stripeToken]=Stripe+Token
+    headers:
+      User-Agent:
+      - Stripe/v1 RubyBindings/3.13.0
+      Authorization:
+      - Bearer <STRIPE_API_KEY>
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"3.13.0","lang":"ruby","lang_version":"2.3.3 p222 (2016-11-21)","platform":"x86_64-darwin16","engine":"ruby","publisher":"stripe","uname":"Darwin
+        jacklyns-MacBook-Air.local 17.5.0 Darwin Kernel Version 17.5.0: Mon Mar  5
+        22:24:32 PST 2018; root:xnu-4570.51.1~1/RELEASE_X86_64 x86_64","hostname":"jacklyns-MacBook-Air.local"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 18 Apr 2018 08:58:37 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '185'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_tHuzU9uACGqbAT
+      Stripe-Version:
+      - '2018-02-06'
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "message": "The source hash must include an 'object' key indicating what type of source to create.",
+            "param": "source",
+            "type": "invalid_request_error"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 08:58:37 GMT
+recorded_with: VCR 4.0.0

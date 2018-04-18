@@ -1,0 +1,14 @@
+<h1> Add a Customer</h1>
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+<!-- https://stripe.com/docs/stripe-js/elements/quickstart -->
+<%= form_for @user, action: "create" do |f| %>
+  <div id="card-element">
+  </div>
+
+  <div id="card-errors" role="alert"></div>
+  <div id="card-success-message" role="alert"></div>
+  <%= submit_tag("submit") %>
+
+<% end %>

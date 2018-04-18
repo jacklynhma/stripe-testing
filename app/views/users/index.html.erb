@@ -1,0 +1,13 @@
+<h1> All Users </h1>
+<% if flash[:notice] %>
+  <h3> <%= flash[:notice] %> </h3>
+<% end %>
+
+<br>
+
+<% @users.each do |user| %>
+  <%= user.id %>
+  <br>
+<% end %>
+
+<%= link_to "Create New User", new_user_path  %>

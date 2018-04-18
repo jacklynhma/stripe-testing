@@ -6,6 +6,8 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'stripe'
+
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
@@ -13,13 +15,19 @@ group :development do
 end
 
 group :development, :test do
-  gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'byebug'
+  gem 'capybara', '~> 2.16.1'
+  gem 'chromedriver-helper', '~> 1.1.0'
+  gem "dotenv-rails"
+  gem "factory_bot_rails"
   gem 'launchy', require: false
-  gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.7.2'
+  gem 'rails-controller-testing'
   gem 'shoulda'
+  gem 'selenium-webdriver', '~> 3.8.0'
   gem 'valid_attribute'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do
